@@ -1,0 +1,14 @@
+#contributor : Daniel Perez <tuvistavie@hotmail.com>
+#name : \documentclass[11pt,fleqn,a4paper]{xejarticle} ... \end{document}
+# --
+\documentclass[11pt,fleqn,a4paper]{xearticle}
+\date{${1:\today}}
+\deadline{$2}
+\title{${3:Report}}
+\author{${4:PEREZ Daniel}}
+\studnb{${5:1W09C753-8}}
+\begin{document}
+\maketitle
+%
+$0
+\end{document}

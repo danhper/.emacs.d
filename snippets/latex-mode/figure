@@ -1,0 +1,9 @@
+#name : \begin{figure}...\end{figure}
+# --
+\begin{figure}[h]
+        \begin{center}
+                \includegraphics[height=$1,width=$2]{$3}
+        \caption{\label{$4}$5}
+        \end{center}
+\end{figure}
+$0

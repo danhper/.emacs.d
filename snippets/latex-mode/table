@@ -1,0 +1,10 @@
+#name : \begin{table}...\end{table}
+# --
+\begin{table}[h]
+        \begin{center}
+                \caption{\label{$1}$2}
+                \begin{tabular}{$3}
+                $0
+                \end{tabular}
+        \end{center}
+\end{table}
