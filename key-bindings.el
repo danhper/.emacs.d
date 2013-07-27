@@ -43,4 +43,7 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "C-x C-o") 'find-file-in-project)
+(global-set-key (kbd "C-c C-;") 'recompile)
+(global-set-key (kbd "<f8>") 'ispell)
+(global-set-key (kbd "<f9>") 'ispell-word)
 (provide 'key-bindings)

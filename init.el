@@ -70,6 +70,8 @@
 ;;        "/usr/share/emacs/site-lisp/auctex/style/"))
 (setq TeX-output-view-style '("^pdf$" "." "evince -w %o"))
 (setq preview-image-type 'dvipng)
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+(setq-default ispell-program-name "aspell")
 
 
 ;;latex japanese
@@ -165,4 +167,5 @@
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
+
 (package-initialize)
