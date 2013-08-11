@@ -58,10 +58,6 @@
     path = site-lisp/helm
     url = https://github.com/emacs-helm/helm.git
 
-[submodule "site-lisp/markdown-mode"]
-    path = site-lisp/markdown-mode
-    url = https://github.com/defunkt/markdown-mode.git
-
 [submodule "site-lisp/multiple-cursors"]
     path = site-lisp/multiple-cursors
     url = https://github.com/magnars/multiple-cursors.el.git
@@ -81,3 +77,7 @@
 [submodule "site-lisp/yasnippet"]
     path = site-lisp/yasnippet
     url = https://github.com/capitaomorte/yasnippet.git
+
+[submodule "site-lisp/markdown-mode"]
+	path = site-lisp/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
