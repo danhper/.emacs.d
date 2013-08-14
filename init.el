@@ -79,7 +79,7 @@
 (setq TeX-engine 'xetex)
 (setq TeX-PDF-mode t)
 
-(require 'writeroom-mode)
+(require 'distraction-free)
 
 ;;scala
 (require 'scala-mode2)
@@ -171,6 +171,7 @@
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
+
 
 (package-initialize)
 

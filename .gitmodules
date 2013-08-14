@@ -81,6 +81,6 @@
 [submodule "site-lisp/markdown-mode"]
 	path = site-lisp/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "site-lisp/writeroom-mode"]
-	path = site-lisp/writeroom-mode
-	url = https://github.com/joostkremers/writeroom-mode.git
+[submodule "site-lisp/distraction-free"]
+	path = site-lisp/distraction-free
+	url = https://github.com/inffcs00/emacs-distraction-free.git

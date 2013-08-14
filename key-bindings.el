@@ -35,7 +35,6 @@
 (global-set-key (kbd "s-k") 'uncomment-region)
 (global-set-key (kbd "s-;") 'comment-or-uncomment-region)
 (global-set-key (kbd "s-u") 'undo)
-(global-set-key (kbd "s-<f11>") 'center-text-horizontally)
 (global-set-key (kbd "C-x C-u") 'upcase-word)
 (global-set-key (kbd "C-x C-l") 'downcase-word)
 (global-set-key (kbd "C-?") 'help-command)
