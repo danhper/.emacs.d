@@ -79,6 +79,8 @@
 (setq TeX-engine 'xetex)
 (setq TeX-PDF-mode t)
 
+(require 'writeroom-mode)
+
 ;;scala
 (require 'scala-mode2)
 
