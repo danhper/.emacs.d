@@ -27,9 +27,7 @@
 
 ;; Write backup files to own directory
 (setq backup-directory-alist
-      `(("." . ,(expand-file-name
-                 (concat user-emacs-directory "backups")))))
-
+      `(("." . ,(expand-file-name "backups" user-emacs-directory))))
 
 (load-theme 'railscasts t)
 
@@ -65,9 +63,8 @@
 (load "auctex.el" nil t t)
 ;; (load "preview-latex.el" nil t t)
 (setq TeX-style-path
-      '("style/" "auto/"
-        (expand-file-name "style" "auctex" site-lisp-dir)))
-;;        "/usr/share/emacs/site-lisp/auctex/style/"))
+      (list "style/" "auto/"
+        (expand-file-name (concat "auctex" "/" "style") site-lisp-dir)))
 (setq TeX-output-view-style '("^pdf$" "." "evince -w %o"))
 (setq preview-image-type 'dvipng)
 (add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
