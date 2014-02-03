@@ -25,6 +25,8 @@
 (column-number-mode 1)
 (setq-default process-coding-system-alist nil)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name "backups" user-emacs-directory))))
@@ -111,12 +113,12 @@
 (require 'tuareg)
 (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
 (autoload 'camldebug "camldebug" "Run the Caml debugger" t)
-(autoload 'tuareg-imenu-set-imenu "tuareg-imenu" 
-  "Configuration of imenu for tuareg" t) 
+(autoload 'tuareg-imenu-set-imenu "tuareg-imenu"
+  "Configuration of imenu for tuareg" t)
 
 (add-hook 'tuareg-mode-hook 'tuareg-imenu-set-imenu)
 
-(setq auto-mode-alist 
+(setq auto-mode-alist
       (append '(("\\.ml[ily]?$" . tuareg-mode)
                 ("\\.topml$" . tuareg-mode))
               auto-mode-alist))
@@ -152,7 +154,7 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(customize-set-variable 'markdown-command "multimarkdown")
+(customize-set-variable 'markdown-command "multimarkdown -f")
 
 
 ;;80 words line and horizontal center
@@ -165,10 +167,9 @@
 
 
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 
 
 (package-initialize)
-
