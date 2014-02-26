@@ -143,6 +143,9 @@
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
 
+;; zencoding
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;;helm
 (require 'helm-config)

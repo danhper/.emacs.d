@@ -84,3 +84,6 @@
 [submodule "site-lisp/distraction-free"]
 	path = site-lisp/distraction-free
 	url = https://github.com/inffcs00/emacs-distraction-free.git
+[submodule "site-lisp/zencoding"]
+	path = site-lisp/zencoding
+	url = https://github.com/rooney/zencoding.git
