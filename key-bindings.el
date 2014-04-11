@@ -15,7 +15,7 @@
 (global-set-key (kbd "s-.") 'end-of-buffer)
 (global-set-key (kbd "s-=") 'enlarge-window-horizontally)
 (global-set-key (kbd "s-+") 'enlarge-window)
-(global-set-key (kbd "M-p") 'show-paren-mode)
+(global-set-key (kbd "s-p") 'show-paren-mode)
 (global-set-key (kbd "<C-return>") 'newline-and-indent)
 (global-set-key (kbd "s-x") 'clipboard-kill-region)
 (global-set-key (kbd "s-c") 'clipboard-kill-ring-save)
@@ -45,4 +45,16 @@
 (global-set-key (kbd "C-c C-;") 'recompile)
 (global-set-key (kbd "<f8>") 'ispell)
 (global-set-key (kbd "<f9>") 'ispell-word)
+
+(defun run-rake ()
+  "Runs rake"
+  (interactive)
+  (save-window-excursion
+    (when (get-buffer "async")
+      (kill-buffer "async"))
+    (shell-command "rake &"
+     (generate-new-buffer "async"))))
+
+(global-set-key (kbd "C-c r") 'run-rake)
+
 (provide 'key-bindings)

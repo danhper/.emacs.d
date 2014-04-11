@@ -24,6 +24,7 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (setq-default process-coding-system-alist nil)
+(put 'downcase-region 'disabled nil)
 
 ;; Write backup files to own directory
 (setq backup-directory-alist
@@ -141,9 +142,14 @@
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
 
+;; CoffeeScript
+(require 'coffee-mode)
 
 ;;helm
 (require 'helm-config)
+
+;; css
+(setq css-indent-offset 2)
 
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
@@ -152,7 +158,7 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(customize-set-variable 'markdown-command "multimarkdown")
+(customize-set-variable 'markdown-command "multimarkdown -f")
 
 
 ;;80 words line and horizontal center
@@ -162,6 +168,12 @@
 (setq jedi:setup-keys t)
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
+
+(autoload 'wl "wl" "Wanderlust" t)
+(autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+(autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+(setq gnutls-min-prime-bits 1024)
+
 
 
 (require 'package)
