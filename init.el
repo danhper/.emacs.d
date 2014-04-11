@@ -26,6 +26,8 @@
 (setq-default process-coding-system-alist nil)
 (put 'downcase-region 'disabled nil)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name "backups" user-emacs-directory))))
@@ -112,12 +114,12 @@
 (require 'tuareg)
 (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
 (autoload 'camldebug "camldebug" "Run the Caml debugger" t)
-(autoload 'tuareg-imenu-set-imenu "tuareg-imenu" 
-  "Configuration of imenu for tuareg" t) 
+(autoload 'tuareg-imenu-set-imenu "tuareg-imenu"
+  "Configuration of imenu for tuareg" t)
 
 (add-hook 'tuareg-mode-hook 'tuareg-imenu-set-imenu)
 
-(setq auto-mode-alist 
+(setq auto-mode-alist
       (append '(("\\.ml[ily]?$" . tuareg-mode)
                 ("\\.topml$" . tuareg-mode))
               auto-mode-alist))
@@ -142,8 +144,14 @@
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
 
+
 ;; CoffeeScript
 (require 'coffee-mode)
+
+;; zencoding
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode)
+
 
 ;;helm
 (require 'helm-config)
@@ -177,10 +185,9 @@
 
 
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 
 
 (package-initialize)
-
