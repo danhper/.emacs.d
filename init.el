@@ -168,6 +168,9 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (customize-set-variable 'markdown-command "multimarkdown -f")
 
+;; scheme
+(load "~/.emacs.d/site-lisp/geiser/build/elisp/geiser-load")
+
 
 ;;80 words line and horizontal center
 (setq whitespace-style '(face lines-tail trailing)

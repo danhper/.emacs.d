@@ -90,3 +90,6 @@
 [submodule "site-lisp/zencoding"]
 	path = site-lisp/zencoding
 	url = https://github.com/rooney/zencoding.git
+[submodule "site-lisp/geiser"]
+	path = site-lisp/geiser
+	url = git://git.sv.gnu.org/geiser.git
