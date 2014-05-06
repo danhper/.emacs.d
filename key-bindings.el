@@ -3,6 +3,7 @@
 (global-set-key (kbd "s-SPC") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-s-SPC") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-l") 'mc/edit-lines)
+(global-set-key (kbd "s-j") 'toggle-input-method)
 (global-set-key (kbd "<zenkaku-hankaku>") 'toggle-input-method)
 (global-set-key (kbd "<hiragana-katakana>") 'toggle-input-method)
 (global-set-key (kbd "M-`") 'toggle-input-method)
@@ -22,7 +23,6 @@
 (global-set-key (kbd "s-v") 'x-clipboard-yank)
 (global-set-key (kbd "C-z") 'toggle-window-split)
 (global-set-key (kbd "s-r") 'replace-regexp)
-(global-set-key (kbd "s-g") '(lambda () (interactive) (async-shell-command "comptex")))
 (global-set-key (kbd "<C-muhenkan>") 'previous-buffer)
 (global-set-key (kbd "<C-henkan>") 'next-buffer)
 (global-set-key (kbd "<muhenkan>") 'windmove-left)
@@ -31,8 +31,6 @@
 (global-set-key (kbd "<kp-add>") 'next-buffer)
 (global-set-key (kbd "<C-kp-subtract>") 'windmove-left)
 (global-set-key (kbd "<C-kp-add>") 'windmove-right)
-(global-set-key (kbd "s-j") 'comment-region)
-(global-set-key (kbd "s-k") 'uncomment-region)
 (global-set-key (kbd "s-;") 'comment-or-uncomment-region)
 (global-set-key (kbd "s-u") 'undo)
 (global-set-key (kbd "C-x C-u") 'upcase-word)
@@ -45,6 +43,11 @@
 (global-set-key (kbd "C-c C-;") 'recompile)
 (global-set-key (kbd "<f8>") 'ispell)
 (global-set-key (kbd "<f9>") 'ispell-word)
+
+(global-set-key (kbd "C-j") 'helm-mini)
+(global-set-key (kbd "s-g") 'helm-mini)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(define-key key-translation-map [?\C-h] [?\C-?])
 
 (defun run-rake ()
   "Runs rake"
