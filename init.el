@@ -25,6 +25,8 @@
 (setq-default process-coding-system-alist nil)
 (put 'downcase-region 'disabled nil)
 
+(set-frame-font "Ricty-11")
+
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Write backup files to own directory
