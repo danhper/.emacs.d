@@ -62,8 +62,6 @@
       c-basic-offset 4)
 
 ;;latex
-(load "auctex.el" nil t t)
-;; (load "preview-latex.el" nil t t)
 (setq TeX-style-path
       (list "style/" "auto/"
         (expand-file-name (concat "auctex" "/" "style") site-lisp-dir)))
@@ -109,19 +107,6 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 
-;;tuareg-mode
-(require 'tuareg)
-(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
-(autoload 'tuareg-imenu-set-imenu "tuareg-imenu"
-  "Configuration of imenu for tuareg" t)
-
-(add-hook 'tuareg-mode-hook 'tuareg-imenu-set-imenu)
-
-(setq auto-mode-alist
-      (append '(("\\.ml[ily]?$" . tuareg-mode)
-                ("\\.topml$" . tuareg-mode))
-              auto-mode-alist))
 
 ;;php-mode
 (require 'php-mode)
@@ -166,9 +151,6 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (customize-set-variable 'markdown-command "multimarkdown -f")
-
-;; scheme
-(load "~/.emacs.d/site-lisp/geiser/build/elisp/geiser-load")
 
 
 ;;80 words line and horizontal center
